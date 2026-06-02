@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
@@ -16,10 +16,12 @@
             font-family: Arial, sans-serif;
             background-color: #7dd3c0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 40px;
+            gap: 20px;
         }
 
         .browser-window {
@@ -128,6 +130,26 @@
             min-height: 60px;
         }
 
+        /* Link al portfolio */
+        .portfolio-link {
+            display: inline-block;
+            background-color: #0c7489;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .portfolio-link:hover {
+            background-color: #095f70;
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
             .layout-container {
                 grid-template-columns: 1fr;
@@ -178,6 +200,7 @@
             </footer>
         </div>
     </div>
-</body>
 
+    <a href="portfolio.html" class="portfolio-link">Veure el meu Portafolio →</a>
+</body>
 </html>

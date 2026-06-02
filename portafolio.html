@@ -120,6 +120,14 @@
         .project-image {
             width: 100%;
             height: 200px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+
+        .project-image-placeholder {
+            width: 100%;
+            height: 200px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
@@ -142,6 +150,17 @@
             color: #666;
             line-height: 1.6;
         }
+
+        .project-content a {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .project-content a:hover { text-decoration: underline; }
 
         #habilidades {
             background: white;
@@ -202,17 +221,9 @@
             border-radius: 4px;
         }
 
-        .skill-level.advanced::after {
-            width: 90%;
-        }
-
-        .skill-level.intermediate::after {
-            width: 70%;
-        }
-
-        .skill-level.basic::after {
-            width: 50%;
-        }
+        .skill-level.advanced::after { width: 90%; }
+        .skill-level.intermediate::after { width: 70%; }
+        .skill-level.basic::after { width: 50%; }
 
         #contacto {
             background-color: #f9f9f9;
@@ -271,9 +282,7 @@
             width: 100%;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-        }
+        .submit-btn:hover { transform: translateY(-2px); }
 
         footer {
             background: #2c3e50;
@@ -296,9 +305,7 @@
             transition: color 0.3s;
         }
 
-        .social-links a:hover {
-            color: #667eea;
-        }
+        .social-links a:hover { color: #667eea; }
 
         @media (max-width: 768px) {
             header .container {
@@ -312,13 +319,8 @@
                 text-align: center;
             }
 
-            section h2 {
-                font-size: 2rem;
-            }
-
-            #inicio h2 {
-                font-size: 2rem;
-            }
+            section h2 { font-size: 2rem; }
+            #inicio h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -347,59 +349,35 @@
     <section id="proyectos">
         <h2>Els Meus Projectes</h2>
         <div class="projects-grid">
+
             <article class="project-card">
-                <div class="project-image">🛒</div>
+                <img src="captura_sello.jpeg" alt="SELLO App" class="project-image">
                 <div class="project-content">
-                    <h3>E-commerce Platform</h3>
-                    <p>Plataforma de comerç electrònic completa amb sistema de pagament integrat, gestió d'inventari i
-                        panel d'administració.</p>
+                    <h3>SELLO</h3>
+                    <p>Aplicació de fidelització digital amb targetes de segells. Els negocis generen un QR i els clients acumulen segells fins a obtenir un premi. Desplegada a Vercel.</p>
+                    <a href="https://sello-app.vercel.app" target="_blank">Veure projecte →</a>
                 </div>
             </article>
 
             <article class="project-card">
-                <div class="project-image">📱</div>
+                <img src="captura_2.png" alt="Khabib Fan Page" class="project-image">
                 <div class="project-content">
-                    <h3>App Mòbil Responsive</h3>
-                    <p>Aplicació web progressiva (PWA) amb disseny responsive adaptat a tots els dispositius i
-                        funcionalitat offline.</p>
+                    <h3>Khabib — The Eagle</h3>
+                    <p>Landing page dedicada a Khabib Nurmagomedov amb disseny editorial fosc, estil revista esportiva premium, carrusel de combats i formulari de contacte amb SweetAlert2.</p>
                 </div>
             </article>
 
             <article class="project-card">
-                <div class="project-image">📊</div>
+                <div class="project-image-placeholder">🛍️</div>
                 <div class="project-content">
-                    <h3>Dashboard Analític</h3>
-                    <p>Panel de control interactiu amb visualització de dades en temps real utilitzant gràfics i
-                        estadístiques avançades.</p>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="project-image">🎨</div>
-                <div class="project-content">
-                    <h3>Portfolio Creatiu</h3>
-                    <p>Web de portafolio amb animacions CSS3, efectes parallax i disseny modern per a artistes i
-                        creatius.</p>
+                    <h3>Botiga de Roba</h3>
+                    <p>Aplicació de gestió d'una botiga de roba amb operacions CRUD completes, sistema de categories, sessions i autenticació amb PHP i PDO sobre MySQL.</p>
                 </div>
             </article>
 
-            <article class="project-card">
-                <div class="project-image">🔐</div>
-                <div class="project-content">
-                    <h3>Sistema d'Autenticació</h3>
-                    <p>Sistema segur d'autenticació d'usuaris amb JWT, protecció CSRF i gestió de sessions avançada.</p>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <div class="project-image">🌐</div>
-                <div class="project-content">
-                    <h3>API RESTful</h3>
-                    <p>API completa amb documentació Swagger, endpoints CRUD i integració amb bases de dades
-                        relacionals.</p>
-                </div>
-            </article>
         </div>
     </section>
+
     <section id="habilidades">
         <h2>Les Meves Habilitats</h2>
         <table class="skills-table">
@@ -449,6 +427,7 @@
             </tbody>
         </table>
     </section>
+
     <section id="contacto">
         <h2>Contacta'm</h2>
         <form class="contact-form">
@@ -471,9 +450,10 @@
             <button type="submit" class="submit-btn">Enviar Missatge</button>
         </form>
     </section>
+
     <footer>
         <div class="social-links">
-            <a href="#" title="GitHub">💻</a>
+            <a href="https://github.com/Dariushzz" target="_blank" title="GitHub">💻</a>
             <a href="#" title="LinkedIn">💼</a>
             <a href="#" title="Twitter">🐦</a>
             <a href="#" title="Email">📧</a>
